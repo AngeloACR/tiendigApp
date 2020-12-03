@@ -1,0 +1,41 @@
+.billingBox {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.shippingBox {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.paymentsBox {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.totalsBox {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.orderButtonBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orderButtonBox button {
+  width: 60%;
+  text-align: center;
+  font-size: 16px;
+  color: white;
+  margin-bottom: 20px;
+  background-color: #ff9600;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #ff9600;
+  border-radius: 23px;
+}
+
+.orderButtonBox button:hover {
+  color: #ff9600;
+  background-color: white;
+}

@@ -1,0 +1,57 @@
+#confirmFiles {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.confirmationForm {
+  width: 100%;
+}
+
+.confirmationForm form {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.formInputConfirmation {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.formInputConfirmation input {
+  width: 100%;
+  height: 23px;
+  padding-left: 10px;
+  line-height: 23px;
+  border-color: black;
+  border-style: solid;
+  background-color: white;
+  color: black !important;
+  border-width: 1px;
+}
+
+.formUploadConfirmation {
+  width: 100%;
+}
+
+.formUploadConfirmation label {
+  width: 100%;
+}
+
+.formUploadConfirmation label button {
+  width: 100%;
+  background-color: #ff9600;
+  color: white;
+  border-color: #ff9600;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.formUploadConfirmation label button:active {
+  color: #ff9600;
+  background-color: white;
+}

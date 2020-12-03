@@ -1,0 +1,43 @@
+.cartEmptyBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cartEmptyMessage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: black;
+}
+
+.cartEmptyBox p {
+  color: white;
+}
+
+.cartEmptyButton {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cartEmptyButton button {
+  width: 60%;
+  margin: auto;
+  margin-top: 20px;
+  background-color: black;
+  color: white;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  border-radius: 23px;
+}
+
+.cartEmptyButton button:hover {
+  background-color: white;
+  color: black;
+}

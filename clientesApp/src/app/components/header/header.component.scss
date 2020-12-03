@@ -1,0 +1,26 @@
+.headerBox {
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.logoBox {
+  width: 30%;
+}
+
+.logoBox img {
+  width: 100%;
+}
+
+.logoutBox {
+  height: 40%;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.logoutBox img {
+  height: 100%;
+}

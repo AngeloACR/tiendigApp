@@ -1,0 +1,17 @@
+.subtotal {
+  display: flex;
+  justify-content: space-between;
+}
+.shipping {
+  display: flex;
+  justify-content: space-between;
+}
+.total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cartTotalInfo {
+  width: 80%;
+  margin: auto;
+}

@@ -1,0 +1,44 @@
+.categoryBox {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.catItem {
+  min-height: 200px;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.catImg {
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+
+.catImg img {
+  width: 100%;
+}
+
+.catName {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.catName p {
+  font-size: 23px;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+}
+
+.backButton {
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+}

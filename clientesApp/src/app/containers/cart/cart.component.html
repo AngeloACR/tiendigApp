@@ -1,0 +1,19 @@
+<app-header class="fullWidth header"></app-header>
+<div class="pageBox" *ngIf="!cartEmpty">
+
+  <app-cart-items class="fullwidth" [currencySymbol]="currencySymbol" [productos]="productos"></app-cart-items>
+  <app-shipping-tool [methods]="shippingMethods" (data)="handleShippingMethod($event)"></app-shipping-tool>
+
+  <app-cart-totals *ngIf="totalsReady" class="fullwidth" [currencySymbol]="currencySymbol" style="width: 100%;"
+    [subtotal]="montoSubtotal" [total]="montoTotal" [shipping]="montoShipping">
+  </app-cart-totals>
+  <div class="finishPurchaseButton">
+
+    <button class="goToCheckoutButton" (click)="goToCheckout()">Finalizar compra</button>
+  </div>
+</div>
+
+<div class="pageBox" *ngIf="cartEmpty">
+
+  <app-cart-empty class="fullwidth"></app-cart-empty>
+</div>

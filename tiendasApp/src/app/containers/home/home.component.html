@@ -1,0 +1,18 @@
+<ion-content>
+  <app-header class="fullWidth header"></app-header>
+  <div class="pageBox">
+    <div class="productBox" *ngFor="let product of products">
+      <div class="productImgBox">
+        <img [src]="product.images[0].src" alt="">
+      </div>
+      <div class="productInfoBox">
+        <div class="productName">
+          <p>{{product.name}}</p>
+        </div>
+        <div class="productPrice">
+          <p>{{product.price}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

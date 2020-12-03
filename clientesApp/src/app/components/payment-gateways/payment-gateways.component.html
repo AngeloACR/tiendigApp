@@ -1,0 +1,18 @@
+<div class="paymentsBox">
+  <form [formGroup]="paymentMethod">
+    <div class="formContent">
+      <ion-label>Escoja el método de pago
+      </ion-label>
+      <ion-item class="paymentItem">
+
+        <ion-select class="paymentSelection" (ionChange)="sendValue()" formControlName="method" okText="Ok"
+          cancelText="Cerrar">
+          <ion-select-option class="selectItem" *ngFor="let payment of payments; let i = index" value="{{i}}">
+            {{payment.title}}
+          </ion-select-option>
+
+        </ion-select>
+      </ion-item>
+    </div>
+  </form>
+</div>

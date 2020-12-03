@@ -1,0 +1,7 @@
+{
+  "name": "tiendigApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

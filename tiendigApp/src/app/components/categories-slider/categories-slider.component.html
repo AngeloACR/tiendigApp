@@ -1,0 +1,17 @@
+<div class="bigSliderBox">
+
+  <div class="categoriesSliderBox">
+
+    <div class="categoryItem" *ngFor="let category of cat1" (click)="goToCategory($event, category)">
+      <img class="categoryImage" *ngIf="category.images" [src]="category.images.src" alt="">
+      <p class="categoryName">{{category.name}}</p>
+    </div>
+  </div>
+  <div class="categoriesSliderBox">
+
+    <div class="categoryItem" *ngFor="let category of cat2" (click)="goToCategory($event, category)">
+      <img class="categoryImage" [src]="category.images.src" *ngIf="category.images" alt="">
+      <p class="categoryName">{{category.name}}</p>
+    </div>
+  </div>
+</div>

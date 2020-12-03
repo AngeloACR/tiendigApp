@@ -1,0 +1,80 @@
+<!-- <app-header class="fullWidth header"></app-header> -->
+<div class="pageBox logoPage">
+
+  <div class="logoBox">
+    <img src="assets/image/logo.png" alt="">
+  </div>
+  <div class="formBox">
+
+    <form [formGroup]="register">
+      <div class="formContentlogin">
+        <div class="formInputlogin">
+          <!--<label for="">Usuario</label>-->
+          <input placeholder="Usuario" type="text" formControlName="username" name="username" />
+        </div>
+        <div class="errorTaglogin" *ngIf="
+                    fRegister.username.errors?.required &&
+                    (fRegister.username.touched || fRegister.username.dirty)
+                  ">
+          Debe ingresar un usuario
+        </div>
+        <div class="formInputlogin">
+          <!--<label for="">Usuario</label>-->
+          <input placeholder="Correo electrónico" type="text" formControlName="email" name="email" />
+        </div>
+        <div class="errorTaglogin" *ngIf="
+                    fRegister.email.errors?.required &&
+                    (fRegister.email.touched || fRegister.email.dirty)
+                  ">
+          Debe ingresar un correo electrónico
+        </div>
+        <div class="formInputlogin">
+          <!--<label for="">Usuario</label>-->
+          <input placeholder="Nombre" type="text" formControlName="first_name" name="first_name" />
+        </div>
+        <div class="errorTaglogin" *ngIf="
+                    fRegister.first_name.errors?.required &&
+                    (fRegister.first_name.touched || fRegister.first_name.dirty)
+                  ">
+          Debe ingresar un nombre
+        </div>
+        <div class="formInputlogin">
+          <!--<label for="">Usuario</label>-->
+          <input placeholder="Apellido" type="text" formControlName="last_name" name="last_name" />
+        </div>
+        <div class="errorTaglogin" *ngIf="
+                    fRegister.last_name.errors?.required &&
+                    (fRegister.last_name.touched || fRegister.last_name.dirty)
+                  ">
+          Debe ingresar un apellido
+        </div>
+        <div class="formInputlogin">
+          <!--<label for="">Contraseña</label>-->
+          <input placeholder="Contraseña" type="password" formControlName="password" name="password" />
+        </div>
+        <div class="errorTaglogin" *ngIf="
+                  fRegister.password.errors?.required &&
+                  (fRegister.password.touched || fRegister.password.dirty)
+                ">
+          Debe ingresar una contraseña
+        </div>
+        <div class="buttonBoxlogin">
+          <!--<button type="button" class="formButton" (click)="registro()">
+                  <p>Registrarse</p>
+                </button>-->
+          <button type="button" (click)="registerUser()" class="formButtonlogin">
+            <p>Registrarse</p>
+          </button>
+        </div>
+        <div class="buttonBoxlogin">
+          <!--<button type="button" class="formButton" (click)="registro()">
+                  <p>Registrarse</p>
+                </button>-->
+          <button type="button" (click)="login()" class="formButtonlogin">
+            <p>Iniciar sesión</p>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

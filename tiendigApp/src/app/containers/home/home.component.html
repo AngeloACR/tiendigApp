@@ -1,0 +1,11 @@
+<app-header class="fullWidth header"></app-header>
+<div class="pageBox">
+  <div class="homeBox" *ngIf="!showStore">
+    <app-categories-slider class="fullWidth" *ngIf="categoriesReady" (catSelected)="openCategory($event)"
+      [categories]="categories"></app-categories-slider>
+  </div>
+  <div style="width:100%;" *ngIf="showStore">
+    <button class="backButton" (click)="backToHome()">De vuelta al home</button>
+    <app-store [category]="catSelected" [products]="products"></app-store>
+  </div>
+</div>

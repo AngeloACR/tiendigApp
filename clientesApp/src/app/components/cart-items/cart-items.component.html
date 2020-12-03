@@ -1,0 +1,19 @@
+<div class="cartItemBox">
+  <div class="cartItemBodyBox">
+
+    <div class="cartItem" *ngFor="let producto of productos">
+      <div class="productDetails">
+
+        <img [src]="producto.producto.images[0].src" *ngIf="producto.producto.images.length" alt="">
+        <div class="productInfo">
+          <p>{{producto.producto.name}}</p>
+          <p>Precio unitario: {{currencySymbol}}{{producto.producto.regular_price}}</p>
+          <p>Subtotal: {{currencySymbol}}{{producto.subtotal}}</p>
+        </div>
+      </div>
+      <div class="productQuantity">
+        <p class="productQuantityInfo">{{producto.qty}}</p>
+      </div>
+    </div>
+  </div>
+</div>

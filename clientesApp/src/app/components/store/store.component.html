@@ -1,0 +1,61 @@
+<div class="storeBigBox" *ngIf="!isDetail">
+  <div class="storeTitle">
+    <p>{{category}}</p>
+  </div>
+  <div class="itemCardBox" *ngFor="let product of products; let i = index">
+    <div class="productImage">
+      <img [src]="product.images[0].src" *ngIf="product.images.length" alt="">
+    </div>
+    <div class="productName">
+      <p>{{product.name}}</p>
+    </div>
+    <div class="productQuantity">
+      <ion-input *ngIf="qtys" type="number" [(ngModel)]="qtys[i]" value="1"></ion-input>
+    </div>
+    <div class="productPrice">
+      <p><span [innerHTML]="toHTML(currencySymbol)"></span>{{product.regular_price}}</p>
+    </div>
+    <div class="cartButton">
+      <button (click)="viewDetail($event, product, i)">Ver detalle</button>
+    </div>
+    <div class="cartButton">
+      <button (click)="addToCart($event, product, i)">Agregar al carrito</button>
+    </div>
+
+  </div>
+</div>
+
+<div class="storeBigBox" id="detailBox" *ngIf="isDetail">
+  <button class="backButton" (click)="backToStore()">A la tienda</button>
+  <div class="productTitle">
+    <p>{{productSelected.name}}</p>
+  </div>
+  <div class="itemCardBox">
+    <div class="productImages">
+
+      <ion-slides pager class="slideMenu" [options]="slideOptsOne" #slideWithNav>
+        <ion-slide *ngFor="let s of imgSlider.slidesItems">
+          <img [src]="s">
+
+        </ion-slide>
+      </ion-slides>
+    </div>
+    <div class="productName">
+      <p [innerHTML]="productSelected.description"></p>
+    </div>
+    <div class="productQuantity">
+      <ion-input type="number" [(ngModel)]="qtys[indexSelected]" value="1"></ion-input>
+    </div>
+    <div class="productPrice">
+      <p><span [innerHTML]="toHTML(currencySymbol)"></span>{{productSelected.regular_price}}</p>
+    </div>
+    <div class="cartButton">
+      <button (click)="addToCart($event, productSelected, indexSelected)">Agregar al carrito</button>
+    </div>
+
+  </div>
+  <!-- <app-product-detail [product]="productSelected" [currencySymbol]="currencySymbol" (addToCart)="addFromDetail($event)"
+    #productDetail>
+  </app-product-detail> -->
+
+</div>

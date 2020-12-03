@@ -1,0 +1,43 @@
+<div class="formBox">
+
+  <form [formGroup]="shipping" (ngSubmit)="sendShipping()">
+    <div class="formContentShipping">
+      <div class="formInputShipping">
+        <!--<label for="">Usuario</label>-->
+        <input (change)="sendValue()" placeholder="Nombre" type="text" formControlName="first_name" name="" />
+      </div>
+      <div class="formInputShipping">
+        <!--<label for="">Usuario</label>-->
+        <input (change)="sendValue()" placeholder="Apellido" type="text" formControlName="last_name" name="" />
+      </div>
+      <div class="formInputShipping">
+        <!--<label for="">Usuario</label>-->
+        <input (change)="sendValue()" placeholder="Empresa" type="text" formControlName="company" name="" />
+      </div>
+      <div class="formInputShipping">
+        <!--<label for="">Usuario</label>-->
+        <input (change)="sendValue()" placeholder="Dirección 1" type="text" formControlName="address_2" name="" />
+      </div>
+      <div class="formInputShipping">
+        <!--<label for="">Usuario</label>-->
+        <input (change)="sendValue()" placeholder="Dirección 2" type="text" formControlName="address_2" name="" />
+      </div>
+      <div class="formInputShipping">
+        <!--<label for="">Usuario</label>-->
+        <input (change)="sendValue()" placeholder="Ciudad" type="text" formControlName="city" name="" />
+      </div>
+      <div class="formInputShipping">
+        <!--<label for="">Usuario</label>-->
+        <input (change)="sendValue()" placeholder="Estado" type="text" formControlName="state" name="" />
+      </div>
+      <div class="formInputShipping">
+        <!--<label for="">Usuario</label>-->
+        <input (change)="sendValue()" placeholder="País" type="text" formControlName="country" name="" />
+      </div>
+      <div class="formInputShipping">
+        <!--<label for="">Usuario</label>-->
+        <input (change)="sendValue()" placeholder="Código postal" type="text" formControlName="postcode" name="" />
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,101 @@
+.productBigBox {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .backButton {
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .productTitle {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .productTitle p {
+    font-size: 31px;
+    color: black;
+  }
+  
+  .itemCardBox {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 2%;
+  }
+  
+  .productImage {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .productImage img {
+    width: 100%;
+  }
+  
+  .productName {
+    width: 100%;
+  }
+  
+  .productName p {
+    width: 100%;
+    white-space: normal;
+    font-weight: bold;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+  }
+  
+  .productQuantity {
+    width: 40%;
+  }
+  
+  .productQuantity input {
+    width: 100%;
+    font-size: 16px;
+  }
+  
+  .productPrice {
+    width: 40%;
+  }
+  
+  .productPrice p {
+    width: 100%;
+    white-space: normal;
+    font-weight: bold;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+  }
+  
+  .cartButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+  }
+  
+  .cartButton button {
+    width: 100%;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    background-color: black;
+    color: white;
+  }
+  
+  .cartButton button:active {
+    color: black;
+    background-color: white;
+  }
+  

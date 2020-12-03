@@ -1,0 +1,18 @@
+<div class="shippingsBox">
+  <form [formGroup]="shippingMethod">
+    <div class="formContent">
+      <ion-label>Escoja el método de envío
+      </ion-label>
+      <ion-item class="shippingItem">
+
+        <ion-select class="shippingSelection" (ionChange)="sendValue()" formControlName="method" okText="Ok"
+          cancelText="Cerrar">
+          <ion-select-option class="selectItem" *ngFor="let item of methods; let i = index" value="{{i}}">
+            {{item.title}}
+          </ion-select-option>
+
+        </ion-select>
+      </ion-item>
+    </div>
+  </form>
+</div>

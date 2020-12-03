@@ -1,0 +1,25 @@
+<app-header class="fullWidth header"></app-header>
+<div class="pageBox">
+  <div class="billingBox">
+    <h1>Dirección de facturación</h1>
+    <app-billing style="width: 100%;" (data)="handleBilling($event)"></app-billing>
+  </div>
+  <div class="shippingBox">
+    <h1>Dirección de envío</h1>
+    <app-shipping style="width: 100%;" (data)="handleShipping($event)"></app-shipping>
+  </div>
+  <div class="paymentsBox">
+    <h1>Método de pago</h1>
+    <app-payment-gateways *ngIf="paymentsGetted" [payments]="payments" style="width: 100%;"
+      (data)="handlePayment($event)">
+    </app-payment-gateways>
+  </div>
+  <div class="totalsBox">
+    <app-cart-totals class="fullwidth" *ngIf="totalsReady" [currencySymbol]="currencySymbol" style="width: 100%;"
+      [subtotal]="montoSubtotal" [total]="montoTotal" [shipping]="montoShipping">
+    </app-cart-totals>
+  </div>
+  <div class="orderButtonBox">
+    <button (click)="createOrder()">Realizar pedido</button>
+  </div>
+</div>

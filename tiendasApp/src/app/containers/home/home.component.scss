@@ -1,0 +1,44 @@
+.productBox {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #ebebeb;
+  padding-bottom: 20px;
+}
+
+.productImgBox {
+  width: 30%;
+}
+
+.productImgBox img {
+  width: 100%;
+}
+
+.productInfoBox {
+  margin-top: 20px;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+}
+
+.productName {
+  width: 100%;
+}
+
+.productName p {
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.productPrice {
+  width: 100%;
+}
+
+.productPrice p {
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+}

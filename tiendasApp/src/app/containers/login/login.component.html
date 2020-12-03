@@ -1,0 +1,40 @@
+<ion-content>
+  <app-header class="fullwidth header" style="background-color: black"></app-header>
+  <div class="pageBox logoPage">
+    <div class="formBox">
+
+      <form [formGroup]="login" (ngSubmit)="logUser()">
+        <div class="formContentlogin">
+          <div class="formInputlogin">
+            <!--<label for="">Usuario</label>-->
+            <input placeholder="Usuario" type="text" formControlName="username" name="username" />
+          </div>
+          <div class="errorTaglogin" *ngIf="
+                fLogin.username.errors?.required &&
+                (fLogin.username.touched || fLogin.username.dirty)
+                ">
+            Debe ingresar un usuario
+          </div>
+          <div class="formInputlogin">
+            <!--<label for="">Contraseña</label>-->
+            <input placeholder="Contraseña" type="password" formControlName="password" name="password" />
+          </div>
+          <div class="errorTaglogin" *ngIf="
+        fLogin.password.errors?.required &&
+                (fLogin.password.touched || fLogin.password.dirty)
+              ">
+            Debe ingresar una contraseña
+          </div>
+          <div class="buttonBoxlogin">
+            <!--<button type="button" class="formButton" (click)="registro()">
+                <p>Registrarse</p>
+              </button>-->
+            <button type="submit" class="formButtonlogin">
+              Iniciar Sesion
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</ion-content>

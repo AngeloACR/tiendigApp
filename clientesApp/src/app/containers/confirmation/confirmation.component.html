@@ -1,0 +1,20 @@
+<app-header class="fullWidth header"></app-header>
+<div class="pageBox">
+  <div class="confirmationForm">
+    <form action="" [formGroup]="confirmation">
+      <div class="formInputConfirmation"><input type="text" formControlName="reference"
+          placeholder="Referencia de orden"></div>
+    </form>
+    <form style="width: 100%;">
+      <div class="formUploadConfirmation">
+        <label for="confirmFiles">
+
+          <button (click)="fileInp.click()">Subir confirmaciones</button>
+        </label>
+        <input type="file" (change)="handleUpload()" name="confirmFiles" id="confirmFiles"
+          accept="application/pdf,image/*" multiple #fileInp />
+
+      </div>
+    </form>
+  </div>
+</div>

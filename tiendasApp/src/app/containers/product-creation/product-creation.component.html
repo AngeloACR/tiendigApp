@@ -1,0 +1,48 @@
+<ion-content>
+  <app-header class="fullWidth header"></app-header>
+
+  <div class="pageBox">
+
+    <div class="formBox">
+
+      <form [formGroup]="product" (ngSubmit)="createProduct()">
+        <div class="formContent">
+          <div class="formInput">
+            <!--<label for="">Usuario</label>-->
+            <input placeholder="Nombre del producto" type="text" formControlName="name" name="name" />
+          </div>
+          <div class="formInputPrice">
+            <label for="">$</label>
+            <input placeholder="Precio" type="number" formControlName="regular_price" name="regular_price" />
+          </div>
+          <div class="formCheckboxInput">
+            <p class="checkboxTitle">Categorías</p>
+            <ion-list>
+              <ion-item class="checkboxItem" *ngFor="let cat of cats">
+                <ion-checkbox slot="end" checked="false" [value]="cat.id" (ionChange)="onCatChange($event)">
+                </ion-checkbox>
+                <ion-label>{{cat.name}}</ion-label>
+              </ion-item>
+            </ion-list>
+          </div>
+          <div class="formCheckboxInput">
+            <p class="checkboxTitle">Etiquetas</p>
+            <ion-list>
+              <ion-item *ngFor="let tag of tags">
+                <ion-checkbox slot="end" checked="false" [value]="tag.id" (ionChange)="onTagChange($event)">
+                </ion-checkbox>
+                <ion-label>{{tag.name}}</ion-label>
+              </ion-item>
+            </ion-list>
+          </div>
+
+          <div class="buttonBox">
+            <button type="submit" class="formButton">
+              <p>Crear producto</p>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</ion-content>

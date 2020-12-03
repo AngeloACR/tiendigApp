@@ -1,0 +1,29 @@
+<div class="productBigBox">
+  <div class="productTitle">
+    <p>{{product.name}}</p>
+  </div>
+  <div class="itemCardBox">
+    <div class="productImages">
+
+      <ion-slides pager class="slideMenu" [options]="slideOptsOne" #slideWithNav>
+        <ion-slide *ngFor="let s of imgSlider.slidesItems">
+          <img [src]="s">
+
+        </ion-slide>
+      </ion-slides>
+    </div>
+    <div class="productName">
+      <p>{{product.description}}</p>
+    </div>
+    <div class="productQuantity">
+      <ion-input type="number" [(ngModel)]="product.qty" value="1"></ion-input>
+    </div>
+    <div class="productPrice">
+      <p><span [innerHTML]="toHTML(currencySymbol)"></span>{{product.regular_price}}</p>
+    </div>
+    <div class="cartButton">
+      <button (click)="addProduct()">Agregar al carrito</button>
+    </div>
+
+  </div>
+</div>

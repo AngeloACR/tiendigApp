@@ -1,0 +1,117 @@
+.storeBigBox {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.backButton {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 5px;
+  background-color: #ff9600;
+
+  color: white;
+  font-size: 16px;
+  text-align: center;
+}
+
+.storeTitle {
+  width: 100%;
+  text-align: center;
+}
+
+.storeTitle p {
+  font-size: 31px;
+  color: black;
+}
+
+.itemCardBox {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 2%;
+}
+
+.productImage {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#detailBox .itemCardBox {
+  width: 100%;
+}
+
+#detailBox .productImages {
+  width: 100%;
+}
+
+#detailBox .productImages ion-slide {
+  width: 100%;
+}
+
+.productImage img {
+  width: 100%;
+}
+
+.productName {
+  width: 100%;
+}
+
+.productName p {
+  width: 100%;
+  white-space: normal;
+  font-weight: bold;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+}
+
+.productQuantity {
+  width: 40%;
+}
+
+.productQuantity input {
+  width: 100%;
+  font-size: 16px;
+}
+
+.productPrice {
+  width: 40%;
+}
+
+.productPrice p {
+  width: 100%;
+  white-space: normal;
+  font-weight: bold;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+}
+
+.cartButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+}
+
+.cartButton button {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 5px;
+  border-style: solid;
+  border-color: #ff9600;
+  border-width: 2px;
+  background-color: #ff9600;
+  color: white;
+}
+
+.cartButton button:active {
+  color: #ff9600;
+  background-color: white;
+}
