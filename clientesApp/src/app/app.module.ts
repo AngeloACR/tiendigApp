@@ -44,6 +44,7 @@ import { ProductDetailComponent } from "./components/product-detail/product-deta
     BuscadorComponent,
     CartComponent,
     CategoriesComponent,
+    RegisterComponent,
     CheckoutComponent,
     BillingComponent,
     HomeComponent,
